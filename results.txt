@@ -1,0 +1,25 @@
+Results for the extraLargeArray
+insert 490.9687 ms
+append 1.9396 ms
+
+Results for the largeArray
+insert 4.9104 ms
+append 342 μs
+
+Results for the mediumArray
+insert 105 μs
+append 91 μs
+
+Results for the smallArray
+insert 30.2 μs
+append 64.1 μs
+
+Results for the tinyArray
+insert 23.3 μs
+append 59.5 μs
+
+2.The insert method took way longer to finish than the append method.
+
+4.The resulys tell us how long it takes to insert or append stuff to arrays of different sizes. We can see that as the array size increases both insertions and appends take more time but not at the same rate. The tiny and small arrays seem to handle both operations pretty well, with insertions taking a bit longer. However for the medium and large arrays both insertions and appends start to take longer, with insertions being slower than appends. For the extra-large array, inserting takes way longer than appending. So, if you're dealing with a big ol' array and need to choose between insertions and appends, go for appends for better performance.
+
+5.The reason inserting things into an array is slower than appending is because of how arrays are stored in memory. When we insert something in the middle of an array all the other elements after the insertion point have to move down, which takes more time as the array gets bigger. But when you append something to the end of an array you don't have to move anything, so it's faster.
